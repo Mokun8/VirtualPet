@@ -13,17 +13,8 @@ public class VirtualPet {
       int choice = 0;
       
       System.out.println("Welcome to Virtual Pet Simulator!");
-      System.out.println("Your pet's name is Mr. Pickles.");
-
-      // TODO 1:
-      // Create a while loop that continues while:
-      // happiness < 15
-      // hunger < 10
-      // energy > 0
-      // choice != 5
-
-         // TODO 2:
-         // Display happiness, hunger, and energy.
+      System.out.println("Your pet's name is Elias.");
+         while(happiness < 15 && hunger < 10 && energy > 0 && choice != 5){
          
          System.out.println("What would you like to do?");
          System.out.println("1. Feed");
@@ -33,6 +24,61 @@ public class VirtualPet {
          System.out.println("5. Quit");
          
          choice = input.nextInt();
+         
+       if(choice == 1){
+           System.out.println("Elias loves to eat right out of your hand");
+           happiness = (happiness += 1);
+           hunger = (hunger -= 1);
+           System.out.println("Elias' hunger level is " + hunger);
+           System.out.println("Elias' happiness level is " + happiness);
+           System.out.println("Elias' energy level is " + energy);
+         }else if(choice == 2){
+           System.out.println("Elias plays your game");
+           happiness = (happiness += 3);
+           hunger = (hunger += 2);
+           energy = (energy -= 2);
+           System.out.println("Elias' hunger level is " + hunger);
+           System.out.println("Elias' happiness level is " + happiness);
+           System.out.println("Elias' energy level is " + energy);
+         }else if(choice == 3){
+           System.out.println("Elias passed out");
+           happiness = (happiness -= 1);
+           hunger = (hunger += 1);
+           energy = (energy -= 3);
+           System.out.println("Elias' hunger level is " + hunger);
+           System.out.println("Elias' happiness level is " + happiness);
+           System.out.println("Elias' energy level is " + energy);
+         }else if(choice == 4){
+           System.out.println("Elias is cleaned for the first time this year!");
+           happiness = (happiness += 2);
+           hunger = (hunger += 1);
+           energy = (energy -= 1);
+           System.out.println("Elias' hunger level is " + hunger);
+           System.out.println("Elias' happiness level is " + happiness);
+           System.out.println("Elias' energy level is " + energy);
+         }else if(choice == 5){
+           System.out.println("You quit the game. Elias is not pleased.");
+         }else {
+         System.out.println("Invalid option, try again");
+         }
+         
+         }
+         
+         if(hunger >= 10){
+           System.out.println("Don't worry, games with Elias are never fun anyway");
+           System.out.println("You lost because Elias got too hungry");
+         }
+         
+         if(energy <= 0){
+           System.out.println("Don't worry, games with Elias are never fun anyway");
+           System.out.println("You lost because Elias got too tired");
+         }
+         
+         if (happiness >= 15){
+         System.out.println("You won the Virtual Pet Simulator!");
+         }
+         
+
          
          // TODO 3:
          // Create an if / else if / else statement
